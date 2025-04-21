@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng giá thiết kế hồ sơ năng lực</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #e74c3c; /* Màu đỏ cam giống tiêu đề */
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        /* --- Table Styles --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        thead {
+            background-color: #e74c3c; /* Màu đỏ cam */
+            color: white;
+        }
+        thead th {
+            border-color: #d64535; /* Màu đỏ cam đậm hơn chút */
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+        tbody td:first-child {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        /* --- Package Details Styles --- */
+        .package-details {
+            display: flex;
+            gap: 20px; /* Khoảng cách giữa các cột */
+            flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+            justify-content: center;
+        }
+        .package-column {
+            flex: 1; /* Cho phép các cột co giãn đều */
+            min-width: 280px; /* Chiều rộng tối thiểu cho mỗi cột */
+            border: 1px solid #eee;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .package-column h3 {
+            color: white;
+            padding: 15px;
+            margin: -20px -20px 20px -20px; /* Mở rộng ra sát viền */
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            text-transform: uppercase;
+        }
+        .package-column.basic h3 { background-color: #f39c12; } /* Màu vàng */
+        .package-column.professional h3 { background-color: #e74c3c; } /* Màu đỏ cam */
+        .package-column.premium h3 { background-color: #f39c12; } /* Màu vàng (giống gói cơ bản trong hình) */
+
+        .package-column p {
+            color: #555;
+            margin-bottom: 20px;
+            min-height: 40px; /* Đảm bảo chiều cao đồng đều */
+        }
+        .package-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+        .package-column li {
+            margin-bottom: 10px;
+            padding-left: 20px; /* Thụt lề cho dấu chấm */
+            position: relative;
+            color: #333;
+        }
+        .package-column li::before {
+            content: '●'; /* Dấu chấm tròn */
+            position: absolute;
+            left: 0;
+            color: #e74c3c; /* Màu dấu chấm */
+            font-size: 10px; /* Kích thước dấu chấm */
+            top: 5px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            th, td {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+            .package-details {
+                flex-direction: column; /* Chuyển thành cột trên màn hình nhỏ */
+                align-items: center;
+            }
+            .package-column {
+                width: 90%; /* Chiếm gần hết chiều rộng */
+                max-width: 400px; /* Giới hạn chiều rộng tối đa */
+                flex: none; /* Tắt co giãn */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Bảng giá thiết kế hồ sơ năng lực</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>ĐƠN VỊ</th>
+                <th>&lt; 10 TRANG</th>
+                <th>11 - 20 TRANG</th>
+                <th>&gt; 20 TRANG</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GÓI CƠ BẢN</td>
+                <td>Trang</td>
+                <td>230.000 đ</td>
+                <td>210.000 đ</td>
+                <td>190.000 đ</td>
+            </tr>
+            <tr>
+                <td>GÓI CHUYÊN NGHIỆP</td>
+                <td>Trang</td>
+                <td>310.000 đ</td>
+                <td>290.000 đ</td>
+                <td>270.000 đ</td>
+            </tr>
+            <tr>
+                <td>GÓI CAO CẤP</td>
+                <td>Trang</td>
+                <td>370.000 đ</td>
+                <td>350.000 đ</td>
+                <td>330.000 đ</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="package-details">
+        <div class="package-column basic">
+            <h3>GÓI CƠ BẢN</h3>
+            <p>Phù hợp khi cần triển khai profile công ty nhanh chóng</p>
+            <ul>
+                <li>Khách hàng cung cấp nội dung, hình ảnh</li>
+                <li>1 concept thiết kế</li>
+                <li>3 lần chỉnh sửa</li>
+                <li>Bàn giao file in ấn</li>
+                <li>Bàn giao định dạng File PDF</li>
+            </ul>
+        </div>
+
+        <div class="package-column professional">
+            <h3>GÓI CHUYÊN NGHIỆP</h3>
+            <p>Phù hợp khi cần triển khai profile công ty chuyên nghiệp</p>
+            <ul>
+                <li>Khách hàng cung cấp nội dung, hình ảnh</li>
+                <li>1 concept thiết kế</li>
+                <li>4 lần chỉnh sửa</li>
+                <li>Tư vấn form đăng Profile</li>
+                <li>Tư vấn quy cách in</li>
+                <li>Bàn giao file in ấn</li>
+                <li>Bàn giao định dạng file PDF</li>
+                <li>Tặng 1 cuốn in mẫu</li>
+            </ul>
+        </div>
+
+        <div class="package-column premium">
+            <h3>GÓI CAO CẤP</h3>
+            <p>Phù hợp với các công ty lớn, tập đoàn</p>
+            <ul>
+                <li>Khách hàng cung cấp nội dung, hình ảnh</li>
+                <li>Biên tập nội dung</li>
+                <li>Chỉnh sửa hình ảnh sẵn có</li>
+                <li>1 concept thiết kế</li>
+                <li>5 lần chỉnh sửa</li>
+                <li>Tư vấn form đăng Profile</li>
+                <li>Tư vấn quy cách in</li>
+                <li>Bàn giao file in ấn</li>
+                <li>Bàn giao định dạng file PDF</li>
+                <li>Bàn giao định dạng E-Profile</li>
+                <li>Tặng 1 cuốn in mẫu</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
